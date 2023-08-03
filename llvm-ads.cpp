@@ -105,7 +105,10 @@ std::string toName(Type* t) {
                                 }
                                 return result;
                               }
-    default: assert(false);
+    default:
+        errs() << "unmanaged type: ";
+        t->print(errs(), true);
+        assert(false);
   }
 }
 
@@ -146,7 +149,10 @@ void printType(Type* t, raw_ostream &Out) {
                               Out << toName(t);
                             }
                             return;
-    default: assert(false);
+    default:
+        errs() << "unmanaged type: ";
+        t->print(errs(), true);
+        assert(false);
   }
 }
 
