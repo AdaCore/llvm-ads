@@ -331,6 +331,7 @@ int main(int argc, char **argv) {
   LLVMContext Context;
   Context.setDiagnosticHandler(
       std::make_unique<LLVMDisDiagnosticHandler>(argv[0]));
+  Context.setOpaquePointers(false);
 
   std::unique_ptr<MemoryBuffer> MB = ExitOnErr(
       errorOrToExpected(MemoryBuffer::getFileOrSTDIN(InputFilename)));
