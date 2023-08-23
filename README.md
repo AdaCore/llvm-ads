@@ -2,19 +2,12 @@
 
 ## Building
 
-```
-git clone git.adacore.com:llvm-project
-cd llvm-project/llvm/tools/
-git fetch origin release/15.0.4
-git checkout origin/release/15.0.4
-git clone git@github.com:AdaCore/llvm-ads.git llvm-ads
-cd ..
-mkdir obj
-cd obj
-cmake ..
-make -j32 llvm-ads
-```
+llvm-ads depends on LLVM. If you have LLVM installed, you can compile llvm-ads
+by invoking make in llvm-ads' source directory. The resulting executable will be
+located at `bin/llvm-ads`.
 
 ## Using
 
+```
 ./bin/llvm-ads /usr/local/cuda/nvvm/libdevice/libdevice.10.bc /tmp/libdevice.ads
+```
