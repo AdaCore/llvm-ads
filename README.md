@@ -11,3 +11,9 @@ located at `bin/llvm-ads`.
 ```
 ./bin/llvm-ads /usr/local/cuda/nvvm/libdevice/libdevice.10.bc /tmp/libdevice.ads
 ```
+
+## License
+
+This work is licensed under Apache-2.0 with LLVM-exception.
+
+`SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception`
